@@ -37,28 +37,33 @@
      printf ("Vamos cadastrar os dados?\n");
 
      printf ("Digite a letra do primeiro Estado: ");
-     scanf (" %c",A);
+     scanf (" %c",&A);
+     printf ("\n");
 
      printf ("Digite o código da primeira carta: ");
-     scanf ("%s\n",codigo_carta1);
+     scanf ("%s",codigo_carta1);
+     printf ("\n");
 
      printf ("Digite o nome da primeira cidade: ");
-     scanf ("%s\n",nome_da_cid_1);
+     scanf ("%s",nome_da_cid_1);
+     printf ("\n");
 
      printf ("Digite a quantidade de habitantes da primeira cidade: ");
-     scanf ("%d\n",&populacao_cid_1);
+     scanf ("%d",&populacao_cid_1);
      printf ("\n");
 
      printf ("Digite a área da primeira cidade em km²: ");
-     scanf (" %.2f\n",&area_cid_1);
+     scanf ("%f",&area_cid_1);
+     printf ("\n");
 
      printf ("Digite o PIB da primeira cidade: ");
-     scanf (" %.2f\n",&pib_cid_1);
+     scanf ("%f",&pib_cid_1);
+     printf ("\n");
 
      printf ("Digite o Número de pontos turísticos da primeira cidade: ");
-     scanf ("%d\n",&num_pontos_turisticos_cid_1);
-
+     scanf ("%d",&num_pontos_turisticos_cid_1);
      printf ("\n");
+
 
      printf ("MUITO BEM! Agora vamos cadastrar a segunda Carta");
 
@@ -66,25 +71,31 @@
 
      printf ("Digite a letra do segundo Estado: ");
 
-     scanf ("%c\n",B);
+     scanf (" %c",&B);
+     printf ("\n");
 
      printf ("Digite o código da segunda carta: ");
-     scanf ("%s\n",codigo_carta2);
+     scanf ("%s",codigo_carta2);
+     printf ("\n");
 
      printf ("Digite o nome da segunda cidade: ");
-     scanf ("%s\n",nome_da_cid_2);
+     scanf ("%s",nome_da_cid_2);
+     printf ("\n");
 
      printf ("Digite a quantidade de habitantes da segunda cidade: ");
-     scanf ("%d\n",&populacao_cid_2);
+     scanf ("%d",&populacao_cid_2);
+     printf ("\n");
 
      printf ("Digite a área da segunda cidade em km²: ");
-     scanf ("%.2f\n",&area_cid_2);
+     scanf ("%f",&area_cid_2);
+     printf ("\n");
 
      printf ("Digite o PIB da segunda cidade: ");
-     scanf ("%.2f\n",&pib_cid_2);
+     scanf ("%f",&pib_cid_2);
+     printf ("\n");
 
      printf ("Digite o Número de pontos turísticos da segunda cidade: ");
-     scanf ("%d\n",&num_pontos_turisticos_cid_2);
+     scanf ("%d",&num_pontos_turisticos_cid_2);
 
      printf ("\n");
 

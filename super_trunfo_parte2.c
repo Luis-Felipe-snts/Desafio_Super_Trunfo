@@ -231,20 +231,20 @@
                    if (densidade_dem_1 < densidade_dem_2) {
                     printf ("CARTA 01 (%s) VENCEU!\n", codigo1);
                     printf ("Atributo: Densidade Demográfica\n");
-                    printf ("Densidade Demográfica de %s: %d\n", pais_1, densidade_dem_1);
-                    printf ("Densidade Demográfica de %s: %d\n", pais_2, densidade_dem_2);
+                    printf ("Densidade Demográfica de %s: %.2f\n", pais_1, densidade_dem_1);
+                    printf ("Densidade Demográfica de %s: %.2f\n", pais_2, densidade_dem_2);
                      }
                    else if (densidade_dem_2 < densidade_dem_1) {
                     printf ("CARTA 02 (%s) VENCEU!\n", codigo2);
                     printf ("Atributo: Densidade Demográfica\n");
-                    printf ("Densidade Demográfica de %s: %d\n", pais_1, densidade_dem_1);
-                    printf ("Densidade Demográfica de %s: %d\n", pais_2, densidade_dem_2);
+                    printf ("Densidade Demográfica de %s: %.2f\n", pais_1, densidade_dem_1);
+                    printf ("Densidade Demográfica de %s: %.2f\n", pais_2, densidade_dem_2);
                      }
                     else if (densidade_dem_1 == densidade_dem_2) {
                      printf ("EMPATE\n");
                      printf ("Atributo: Densidade Demográfica\n");
-                     printf ("Densidade Demográfica de %s: %d\n", pais_1, densidade_dem_1);
-                     printf ("Densidade Demográfica de %s: %d\n", pais_2, densidade_dem_2);  
+                     printf ("Densidade Demográfica de %s: %.2f\n", pais_1, densidade_dem_1);
+                     printf ("Densidade Demográfica de %s: %.2f\n", pais_2, densidade_dem_2);  
                     } 
                     else {
                      printf ("Valor inválido")   

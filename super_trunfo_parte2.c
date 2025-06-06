@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
     int main () {
       
         //Opção escolhida pelo usuário no Menu do Jogo

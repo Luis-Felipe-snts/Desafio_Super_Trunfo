@@ -4,7 +4,7 @@
     int main () {
       
         //Opção escolhida pelo usuário no Menu do Jogo
-        int opcao;
+        int opcao, atributo;
       
         //Código da Carta
         char codigo1 [50], codigo2 [50];
@@ -24,8 +24,8 @@
         //Número de pontos turísticos
         int num_pontos_turisticos_1, num_pontos_turisticos_2;
 
-        //Densidade Populacional
-        float densidade_pop_1, densidade_pop_2;
+        //Densidade Demográfica
+        float densidade_dem_1, densidade_dem_2;
 
         //PIB per capita
         float pib_per_capita_1, pib_per_capita_2;
@@ -107,38 +107,151 @@
             printf ("CADASTRO CONCLUÍDO\n");
             printf ("\n");
     
-            densidade_pop_1 = (float) populacao_1/area_1;
-            densidade_pop_2 = (float) populacao_2/area_2;
+            densidade_dem_1 = (float) populacao_1/area_1;
+            densidade_dem_2 = (float) populacao_2/area_2;
             pib_per_capita_1 = pib_1/populacao_1;
             pib_per_capita_2 = pib_2/populacao_2;
     
-            printf (" COMPARAÇÃO >>> Escolha o atributo de comparação entre as cartas: \n");
+            printf (" COMPARAÇÃO >>> Escolha o atributo de comparação entre as cartas\n");
             printf ("\n");
-            printf (" 1. Nome", nome);
-            if (populacao_1 > populacao_2) {
-                printf ("\n");
-                printf ("\n");
-                printf (" %s (%s) é a cidade mais populosa\n", cidade_1, estado_1);
-                printf ("\n");
-                printf (" Carta 01 - %s: %d habitantes", cidade_1, populacao_1);
-                printf ("\n");
-                printf (" Carta 02 - %s: %d habitantes", cidade_2, populacao_2);
-                printf ("\n");
-                printf (" CARTA 01 (%s) venceu!", codigo1);
-    
-            } else {
-                printf ("\n");
-                printf ("\n");
-                printf (" %s (%s) é a cidade mais populosa\n", cidade_2, estado_2);
-                printf ("\n");
-                printf (" Carta 01 - %s: %d habitantes", cidade_1, populacao_1);
-                printf ("\n");
-                printf (" Carta 02 - %s: %d habitantes", cidade_2, populacao_2);
-                printf ("\n");
-                printf (" CARTA 02 (%s) venceu!", codigo2);
-                printf ("\n");
-            }
-           
+            printf (" 1. Nome\n");
+            printf ("2. População\n");
+            printf ("3. Área (km²)\n");
+            printf ("4. PIB\n");
+            printf ("5. Número de Pontos Turísticos\n");
+            printf ("6. Densidade Demográfica\n");
+            printf ("\n");
+            printf ("Atributo: ");
+            scanf ("%d", &atributo);
+            printf ("\n");
+              
+              switch (atributo) {
+                  case 1:
+                   printf ("Carta 01: %s\n", pais_1);
+                   printf ("Carta 02: %s\n", pais_2);
+                  break;
+                  
+                  case 2:
+                     if (populacao_1 > populacao_2) {
+                        printf ("CARTA 01 (%s) VENCEU!\n", codigo1);
+                        printf ("Atributo: População");
+                        printf ("População de %s: %lu habitantes\n", pais_1, populacao_1);
+                        printf ("População de %s: %lu habitantes\n", pais_2, populacao_2);
+                     }
+                     else if (populacao_2 > populacao_1) {
+                        printf ("CARTA 02 (%s) VENCEU!\n", codigo2);
+                        printf ("Atributo: População");
+                        printf ("População de %s: %lu habitantes\n", pais_1, populacao_1);
+                        printf ("População de %s: %lu habitantes\n", pais_2, populacao_2);
+                    }
+                     else if (populacao_1 = populacao_2) {
+                         printf ("EMPATE\n");
+                         printf ("Atributo: População");
+                         printf ("População de %s: %lu habitantes\n", pais_1, populacao_1);
+                         printf ("População de %s: %lu habitantes\n", pais_2, populacao_2);
+                     }
+                      else {
+                         printf ("Valor inválido\n"); 
+                      }
+                  break;
+                  
+                  case 3:
+                   if (area_1 > area_2) {
+                        printf ("CARTA 01 (%s) VENCEU!\n", codigo1);
+                        printf ("Atributo: Área");
+                        printf ("Área (em km²) de %s: %.2f km²\n", pais_1, area_1);
+                        printf ("Área (em km²) de %s: %.2f km²\n", pais_2, area_2);
+                     }
+                   else if (area_2 > area_1) {
+                        printf ("CARTA 02 (%s) VENCEU!\n", codigo2);
+                        printf ("Atributo: Área");
+                        printf ("Área (em km²) de %s: %.2f km²\n", pais_1, area_1);
+                        printf ("Área (em km²) de %s: %.2f km²\n", pais_2, area_2);
+                    }
+                    else if (area_1 = area_2) {
+                        printf ("EMPATE\n");
+                        printf ("Atributo: Área");
+                        printf ("Área (em km²) de %s: %.2f km²\n", pais_1, area_1);
+                        printf ("Área (em km²) de %s: %.2f km²\n", pais_2, area_2);
+                    } 
+                    else {
+                        printf ("Valor inválido");
+                    }  
+                  break;
+
+                  case 4:
+                   if (pib_1 > pib_2) {
+                        printf ("CARTA 01 (%s) VENCEU!\n", codigo1);
+                        printf ("Atributo: PIB (Produto Interno Bruto)");
+                        printf ("PIB de %s: R$%.2f\n", pais_1, pib_1);
+                        printf ("PIB de %s: R$%.2f\n", pais_2, pib_2);
+                         }
+                   else if (pib_2 > pib_1) {
+                        printf ("CARTA 02 (%s) VENCEU!\n", codigo2);
+                        printf ("Atributo: PIB (Produto Interno Bruto)");
+                        printf ("PIB de %s: R$%.2f\n", pais_1, pib_1);
+                        printf ("PIB de %s: R$%.2f\n", pais_2, pib_2);
+                    }
+                    else if (pib_1 = pib_2) {
+                         printf ("EMPATE\n");
+                         printf ("Atributo: PIB (Produto Interno Bruto)");
+                         printf ("PIB de %s: R$%.2f\n", pais_1, pib_1);
+                         printf ("PIB de %s: R$%.2f\n", pais_2, pib_2);
+                    } 
+                    else {
+                         printf ("Valor Inválido");
+                    }
+                  break;
+
+                  case 5:
+                   if (num_pontos_turisticos_1 > num_pontos_turisticos_2) {
+                        printf ("CARTA 01 (%s) VENCEU!\n", codigo1);
+                        printf ("Atributo: Número de Pontos Turísticos");
+                        printf ("Número de Pontos Turísticos de %s: %d\n", pais_1, num_pontos_turisticos_1);
+                        printf ("Número de Pontos Turísticos de %s: %d\n", pais_2, num_pontos_turisticos_2);
+                     }
+                   else if (num_pontos_turisticos_2 > num_pontos_turisticos_1) {
+                        printf ("CARTA 02 (%s) VENCEU!\n", codigo2);
+                        printf ("Atributo: Número de Pontos Turísticos");
+                        printf ("Número de Pontos Turísticos de %s: %d\n", pais_1, num_pontos_turisticos_1);
+                        printf ("Número de Pontos Turísticos de %s: %d\n", pais_2, num_pontos_turisticos_2);
+                    }
+                    else if (num_pontos_turisticos_1 = num_pontos_turisticos_2) {
+                        printf ("EMPATE\n");
+                        printf ("Atributo: Número de Pontos Turísticos");
+                        printf ("Número de Pontos Turísticos de %s: %d\n", pais_1, num_pontos_turisticos_1);
+                        printf ("Número de Pontos Turísticos de %s: %d\n", pais_2, num_pontos_turisticos_2);
+                    } 
+                     else {
+                         printf ("Valor Inválido\n");
+                     } 
+                  break;
+
+                  case 6:
+                   if (densidade_dem_1 < densidade_dem_2) {
+                    printf ("CARTA 01 (%s) VENCEU!\n", codigo1);
+                    printf ("Atributo: Densidade Demográfica\n");
+                    printf ("Densidade Demográfica de %s: %d\n", pais_1, densidade_dem_1);
+                    printf ("Densidade Demográfica de %s: %d\n", pais_2, densidade_dem_2);
+                     }
+                   else if (densidade_dem_2 < densidade_dem_1) {
+                    printf ("CARTA 02 (%s) VENCEU!\n", codigo2);
+                    printf ("Atributo: Densidade Demográfica\n");
+                    printf ("Densidade Demográfica de %s: %d\n", pais_1, densidade_dem_1);
+                    printf ("Densidade Demográfica de %s: %d\n", pais_2, densidade_dem_2);
+                     }
+                    else if (densidade_dem_1 = densidade_dem_2) {
+                     printf ("EMPATE\n");
+                     printf ("Atributo: Densidade Demográfica\n");
+                     printf ("Densidade Demográfica de %s: %d\n", pais_1, densidade_dem_1);
+                     printf ("Densidade Demográfica de %s: %d\n", pais_2, densidade_dem_2);  
+                    } 
+                    else {
+                     printf ("Valor inválido")   
+                    }  
+                  break;
+              }
+               
         }
 
        

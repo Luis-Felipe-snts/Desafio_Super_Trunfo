@@ -78,10 +78,12 @@
     
             printf ("Digite o código da segunda carta: ");
             scanf ("%s",codigo2);
+            getchar ();
             printf ("\n");
     
             printf ("Digite o nome do País: ");
-            scanf ("%s",pais_2);
+            fgets (pais_2, 50, stdin);
+            pais_2 [strcspn (pais_2, "\n")] = 0;
             printf ("\n");
     
             printf ("Digite a quantidade de habitantes desse País: ");
@@ -105,10 +107,10 @@
             printf ("CADASTRO CONCLUÍDO\n");
             printf ("\n");
     
-            (densidade_pop_1 = populacao_1/area_1);
-            (densidade_pop_2 = populacao_2/area_2);
-            (pib_per_capita_1 = pib_1/populacao_1);
-            (pib_per_capita_2 = pib_2/populacao_2);
+            densidade_pop_1 = (float) populacao_1/area_1;
+            densidade_pop_2 = (float) populacao_2/area_2;
+            pib_per_capita_1 = pib_1/populacao_1;
+            pib_per_capita_2 = pib_2/populacao_2;
     
             printf (" COMPARAÇÃO >>> Escolha o atributo de comparação entre as cartas: \n");
             printf ("\n");

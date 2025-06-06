@@ -45,6 +45,7 @@
 
             printf ("Digite o código da primeira carta: ");
             scanf ("%s",codigo1);
+            getchar ();
             printf ("\n");
             
             printf ("Digite o nome do País: \n");
